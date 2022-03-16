@@ -1,0 +1,20 @@
+{% include "header.twig" %}
+
+<section>
+    <div class="container">
+        <h1>User List</h1>
+        {% if users %}
+        <ul class="list-group list-group-flush">
+            {% for user in users %}
+            <li class="list-group-item">{{ user.name }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <div class="alert alert-primary" role="alert">
+            No Users, Pleace add new User!
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+{% include "footer.twig" %}
